@@ -4,6 +4,7 @@ namespace App\Livewire\Pages;
 
 use App\Models\Layanan;
 use App\Models\MetaDescription;
+use App\Models\Partner;
 use App\Models\Produk;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Route;
@@ -16,6 +17,7 @@ class Home extends Component
     public $title;
     public $keunggulan;
     public $products;
+    public $partners;
 
     function mount() {
         $routename = Route::currentRouteName();
@@ -27,6 +29,10 @@ class Home extends Component
 
         $this->products = Cache::remember('products_cache', now()->addDay(), function () {
             return Produk::get();
+        });
+
+        $this->partners = Cache::remember('partners_cache', now()->addDay(), function () {
+            return Partner::get();
         });
 
         $this->meta_title = $result_meta->meta_title;

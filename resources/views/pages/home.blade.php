@@ -68,8 +68,7 @@
             <div class="block bg-white dark:bg-surface-dark p-6 text-center rounded-xl shadow-2-strong">
                 <img class="w-[40%] mx-auto" srcset={{ $item->image }} 480w, {{ $item->image }} 800w,
                     {{ $item->image }} 1200w sizes="(max-width: 600px) 480px, (max-width: 1024px) 800px, 1200px"
-                    src={{ $item->image }} alt="Neonbox & Reklame Surabaya Berkualitas" width="300"
-                    height="200">
+                    src={{ $item->image }} alt="Neonbox & Reklame Surabaya Berkualitas" width="300" height="200">
                 <div class="text-surface dark:text-white mt-4">
                     <h3 class="mb-2 text-lg sm:text-xl font-medium leading-tight">{{ $item->title }}</h3>
                     <p class="mb-4 text-sm sm:text-base">
@@ -103,4 +102,27 @@
         @endforeach
     </x-section>
 
+    <div class="w-full container mx-auto">
+        <div class="max-w-7xl w-full h-[40vh] bg-contain bg-no-repeat bg-right relative mx-auto"
+            style="background-image: url('https://res.cloudinary.com/thors/image/upload/v1742178682/mitramedia/indonesia-map.svg');">
+            <div
+                class="md:absolute md:inset-0 flex md:items-center md:justify-start text-center md:text-left md:w-[45%] w-[70%] mx-auto md:mx-0">
+                <h2 class="text-red-600 font-semibold uppercase md:text-2xl lg:text-5xl pt-5"
+                    style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Banyak Project yang sudah kami kerjakan
+                    di seluruh wilayah Indonesia</h2>
+            </div>
+        </div>
+    </div>
+
+    <x-section-slide class="mt-5" title="<span class='text-red-600'>partner</span> kami">
+        @foreach ($partners as $item)
+            <div class="swiper-slide flex-shrink-0 px-5">
+                <img src="{{ $item->path }}" alt="{{ $item->alt }}" width="300" height="200"
+                    class="w-full h-auto">
+            </div>
+        @endforeach
+    </x-section-slide>
+
+    <x-need-neonbox />
 </div>
+

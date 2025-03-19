@@ -3,5 +3,22 @@
 @section('title', $title)
 
 <div class="w-full mt-20">
-    {{-- To attain knowledge, add things every day; To attain wisdom, subtract things every day. --}}
+    <div class="container mx-auto p-5">
+        <div class="flex flex-col gap-3 my-20">
+            @foreach ($list_article as $item)
+                <div class="border-b border-zinc-400 py-4">
+                    <a href="{{ route('article.show', ['slug' => $item->slug]) }}">
+                        <h2 class="text-4xl font-bold">{{ $item->title }}</h2>
+                    </a>
+                    <p class="text-base">{{ $item->content }}</p>
+
+                    <div class="flex flex-wrap gap-2 text-xs mt-5">
+                        @foreach ($item->tags as $tag)
+                            <p class="px-5 py-2 bg-zinc-600 text-white rounded-full font-bold">{{ $tag->name }}</p>
+                        @endforeach
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
 </div>

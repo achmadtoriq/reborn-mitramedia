@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Pages;
 
+use App\Models\Article;
 use App\Models\MetaDescription;
 use Illuminate\Support\Facades\Route;
 use Livewire\Component;
@@ -12,17 +13,32 @@ class Artikel extends Component
     public $meta_desc;
     public $title;
 
-    function mount() {
-        $routename = Route::currentRouteName();
-        $result_meta = MetaDescription::where('routename', $routename)->first();
+    public $list_article;
+    public $article;  // Untuk menyimpan artikel tunggal (detail)
+    public $slug;     // Untuk menyimpan slug dari URL
 
-        $this->meta_title = $result_meta->meta_title;
-        $this->meta_desc = $result_meta->meta_desc;
-        $this->title = $result_meta->title;
+    function mount($slug = null)
+    {
+        if ($slug) {
+            $this->article = Article::where('slug', $slug)->first();
+        } else {
+            $routename = Route::currentRouteName();
+            $result_meta = MetaDescription::where('routename', $routename)->first();
+
+            $this->meta_title = $result_meta->meta_title;
+            $this->meta_desc = $result_meta->meta_desc;
+            $this->title = $result_meta->title;
+
+            $this->list_article = Article::with('tags')->get()->sortDesc();
+        }
     }
 
     public function render()
     {
-        return view('pages.artikel');
+        if ($this->slug) {
+            return view('pages.artikel-detail');
+        } else {
+            return view('pages.artikel');
+        }
     }
 }

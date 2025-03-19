@@ -25,5 +25,10 @@ class DatabaseSeeder extends Seeder
         // $this->call(LayananSeeder::class);
         // $this->call(ProdukSeeder::class);
         // $this->call(PartnerSeeder::class);
+        $this->call([
+            TagSeeder::class,
+            ArticleSeeder::class,
+        ]);
+
     }
 }

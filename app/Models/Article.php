@@ -9,7 +9,7 @@ class Article extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'content'];
+    protected $fillable = ['title', 'content', 'content_detail', 'created_at'];
 
     // Relasi Many-to-Many ke Tags
     public function tags()

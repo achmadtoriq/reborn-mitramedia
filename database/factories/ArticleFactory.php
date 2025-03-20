@@ -27,6 +27,7 @@ class ArticleFactory extends Factory
             'title' => $title,                      // Menghasilkan judul artikel
             'slug' => Str::slug($title),
             'content' => $this->faker->paragraph,   // Menghasilkan konten artikel
+            'content_detail' => $this->faker->paragraph,   // Menghasilkan konten artikel
         ];
     }
 }

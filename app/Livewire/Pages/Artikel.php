@@ -20,7 +20,7 @@ class Artikel extends Component
     function mount($slug = null)
     {
         if ($slug) {
-            $this->article = Article::where('slug', $slug)->first();
+            $this->article = Article::with('tags')->where('slug', $slug)->first();
         } else {
             $routename = Route::currentRouteName();
             $result_meta = MetaDescription::where('routename', $routename)->first();

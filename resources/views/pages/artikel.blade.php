@@ -4,11 +4,11 @@
 
 <div class="w-full mt-20">
     <div class="container mx-auto p-5">
-        <div class="flex flex-col gap-3 my-20">
+        <div class="max-w-6xl flex flex-col gap-3 my-20 mx-auto">
             @foreach ($list_article as $item)
                 <div class="border-b border-zinc-400 py-4">
                     <a href="{{ route('article.show', ['slug' => $item->slug]) }}">
-                        <h2 class="text-4xl font-bold">{{ $item->title }}</h2>
+                        <h2 class="text-3xl font-bold my-3">{{ $item->title }}</h2>
                     </a>
                     <p class="text-base">{{ $item->content }}</p>
 

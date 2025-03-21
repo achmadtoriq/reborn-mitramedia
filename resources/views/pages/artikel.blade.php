@@ -10,6 +10,8 @@
                     <a href="{{ route('article.show', ['slug' => $item->slug]) }}">
                         <h2 class="text-3xl font-bold my-3">{{ $item->title }}</h2>
                     </a>
+                    <p class="text-xs leading-relaxed text-zinc-500 italic mb-4"> Dibuat oleh <strong>Administrator</strong> pada
+                        {{ date('d-m-Y H:i:s', strtotime($item->created_at)) }}</p>
                     <p class="text-base">{{ $item->content }}</p>
 
                     <div class="flex flex-wrap gap-2 text-xs mt-5">

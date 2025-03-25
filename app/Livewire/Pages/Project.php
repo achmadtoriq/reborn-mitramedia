@@ -58,14 +58,14 @@ class Project extends Component
         if ($slug) {
             $this->params = $this->folderId[$slug];
 
-            // $this->data_image = Cache::remember('project_images_cache', now()->addDay(), function () {
-            //     $data_result = [];
-            //     $data_result[$this->params['name']] = Http::get($this->url . '/' . $this->params['id'])->json();
-            //     return $data_result;
-            // });
-            $data_result = [];
-            $data_result[$this->params['name']] = Http::get($this->url . '/' . $this->params['id'])->json();
-            $this->data_image = $data_result;
+            $this->data_image = Cache::remember('project_images_cache', now()->addDay(), function () {
+                $data_result = [];
+                $data_result[$this->params['name']] = Http::get($this->url . '/' . $this->params['id'])->json();
+                return $data_result;
+            });
+            // $data_result = [];
+            // $data_result[$this->params['name']] = Http::get($this->url . '/' . $this->params['id'])->json();
+            // $this->data_image = $data_result;
         } else {
             $this->data_image = Cache::remember('projects_cache', now()->addDay(), function () {
                 $response = $this->folderId;

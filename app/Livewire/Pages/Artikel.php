@@ -19,16 +19,17 @@ class Artikel extends Component
 
     function mount($slug = null)
     {
+
+        $routename = Route::currentRouteName();
+        $result_meta = MetaDescription::where('routename', $routename)->first();
+
+        $this->meta_title = $result_meta->meta_title;
+        $this->meta_desc = $result_meta->meta_desc;
+        $this->title = $result_meta->title;
+
         if ($slug) {
             $this->article = Article::with('tags')->where('slug', $slug)->first();
         } else {
-            $routename = Route::currentRouteName();
-            $result_meta = MetaDescription::where('routename', $routename)->first();
-
-            $this->meta_title = $result_meta->meta_title;
-            $this->meta_desc = $result_meta->meta_desc;
-            $this->title = $result_meta->title;
-
             $this->list_article = Article::with('tags')->get()->sortDesc();
         }
     }

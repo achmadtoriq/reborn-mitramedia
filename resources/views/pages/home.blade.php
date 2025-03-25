@@ -81,7 +81,7 @@
 
     <x-section class="bg-zinc-100 mt-5" title="<span class='text-red-600'>Apa yang</span> Kami Kerjakan ?">
         @foreach ($products as $product)
-            <a href="#" target="_blank">
+            <a href="{{ route('project.show', ['slug' => $product->slug]) }}" target="_blank">
                 <div class="relative overflow-hidden h-80 sm:h-96 lg:h-[28rem] group">
                     <div class="absolute w-full h-full">
                         <img alt="{{ $product->alt }}" class="object-cover w-full h-full"

@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 $menus = mitra_menus::all();
 
 foreach ($menus as $menu) {
-    if (class_exists($menu->classname)) {
+    if (class_exists($menu->classname) && $menu->is_active == true) {
         Route::get($menu->url, $menu->classname)->name(strtolower(class_basename($menu->classname)));
     }
 }

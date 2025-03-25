@@ -1,3 +1,7 @@
+@section('meta-title', $meta_title)
+@section('meta-desc', $meta_desc)
+@section('title', $title)
+
 <div class="w-full mt-20">
     <div class="w-full lg:container mx-auto p-5">
         <div class="w-full lg:max-w-6xl my-10 mx-auto">

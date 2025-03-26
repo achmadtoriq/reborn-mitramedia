@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('mitra_menus');
+        Schema::dropIfExists('mitra_menuses');
     }
 };

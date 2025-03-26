@@ -67,15 +67,22 @@ class Project extends Component
             // $data_result[$this->params['name']] = Http::get($this->url . '/' . $this->params['id'])->json();
             // $this->data_image = $data_result;
         } else {
-            $this->data_image = Cache::remember('projects_cache', now()->addDay(), function () {
-                $response = $this->folderId;
-                $data_result = [];
-                foreach ($response as $value) {
-                    $data_result[$value['name']] = Http::get($this->url . '/' . $value['id'])->json();
-                }
+            // $this->data_image = Cache::remember('projects_cache', now()->addDay(), function () {
+            //     $response = $this->folderId;
+            //     $data_result = [];
+            //     foreach ($response as $value) {
+            //         $data_result[$value['name']] = Http::get($this->url . '/' . $value['id'])->json();
+            //     }
 
-                return $data_result;
-            });
+            //     return $data_result;
+            // });
+            $response = $this->folderId;
+            $data_result = [];
+            foreach ($response as $value) {
+                $data_result[$value['name']] = Http::get($this->url . '/' . $value['id'])->json();
+            }
+            
+            $this->data_image = $data_result;
         }
     }
 

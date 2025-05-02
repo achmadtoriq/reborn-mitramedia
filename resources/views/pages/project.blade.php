@@ -13,7 +13,7 @@
                     </div>
                     <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
                         @foreach ($item as $value)
-                            <img class="object-cover w-full h-60 rounded-lg" src="{{ $value['thumbnailLink'] }}"
+                            <img class="object-cover w-full h-60 rounded-lg" src="{{ $value['image_path'] }}"
                                 alt="{{ $value['description'] }}">
                         @endforeach
                     </div>

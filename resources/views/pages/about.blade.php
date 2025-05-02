@@ -3,6 +3,7 @@
 @section('title', $title)
 
 <div class="w-full mt-20">
+    <x-header-section title="Tentang Kami" subtitle="Sejarah Singkat Mitramedia Advertising"/>
     <div class="p-5 container mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 place-content-center md:gap-6 my-20">
             <div class="md:px-3">

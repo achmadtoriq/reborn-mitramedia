@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Pages;
 
+use App\Models\GoogleMitraImages;
 use App\Models\MetaDescription;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
@@ -14,7 +15,7 @@ class Project extends Component
     public $meta_desc;
     public $title;
 
-    public $url = "https://toriq-gdrive.serveblog.net/drive";
+    public $url = "http://api.advertisingmitramedia.com/drive";
     public $data_image;
     public $folderId = [
         "neonbox" => [
@@ -57,32 +58,27 @@ class Project extends Component
 
         if ($slug) {
             $this->params = $this->folderId[$slug];
+            $folderIdSlug = $this->params['id'];
+            $folderName = $this->params['name'];
 
-            $this->data_image = Cache::remember('project_images_cache', now()->addDay(), function () {
+            $cache_name = "cache_".$slug;
+
+            $this->data_image = Cache::remember($cache_name, now()->addDay(), function () use ($folderIdSlug, $folderName) {
                 $data_result = [];
-                $data_result[$this->params['name']] = Http::get($this->url . '/' . $this->params['id'])->json();
+                $data_result[$folderName] = GoogleMitraImages::where('folder_id', $folderIdSlug)->get();
                 return $data_result;
             });
-            // $data_result = [];
-            // $data_result[$this->params['name']] = Http::get($this->url . '/' . $this->params['id'])->json();
-            // $this->data_image = $data_result;
         } else {
-            // $this->data_image = Cache::remember('projects_cache', now()->addDay(), function () {
-            //     $response = $this->folderId;
-            //     $data_result = [];
-            //     foreach ($response as $value) {
-            //         $data_result[$value['name']] = Http::get($this->url . '/' . $value['id'])->json();
-            //     }
+            $this->data_image = Cache::remember('all_projects_cache', now()->addDay(), function () {
+                $response = $this->folderId;
+                $data_result = [];
+                foreach ($response as $value) {
+                    $data_image_db = GoogleMitraImages::where('folder_id', $value['id'])->get();
+                    $data_result[$value['name']] = $data_image_db;
+                }
 
-            //     return $data_result;
-            // });
-            $response = $this->folderId;
-            $data_result = [];
-            foreach ($response as $value) {
-                $data_result[$value['name']] = Http::get($this->url . '/' . $value['id'])->json();
-            }
-            
-            $this->data_image = $data_result;
+                return $data_result;
+            });
         }
     }
 

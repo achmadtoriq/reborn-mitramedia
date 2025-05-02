@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SitemapController;
 use App\Livewire\Pages\Artikel;
 use App\Livewire\Pages\Project;
 use App\Models\mitra_menus;

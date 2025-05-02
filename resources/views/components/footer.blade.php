@@ -2,7 +2,7 @@
     <div class="w-full px-16 md:px-0 mx-auto">
         <div class="max-w-7xl grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-6 justify-between mx-auto py-16">
             <div class="flex flex-col px-5">
-                <img src="https://drive.google.com/uc?export=view&id=1VUK0IrSFxRRouteC96LKaXPGAs7SZLQ6"
+                <img src="https://res.cloudinary.com/thors/image/upload/mitramedia2.webp"
                     alt="Advertising Mitramedia - Neon Box Surabaya & Papan Reklame Surabaya" class="w-fit mx-auto md:w-full aspect-auto"  width="300" height="200">
                 <h2 class="mx-auto my-5 text-xl font-bold capitalize">Your Trust Ads Partner</h2>
             </div>

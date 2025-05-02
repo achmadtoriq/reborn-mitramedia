@@ -6,10 +6,10 @@
     class="w-full fixed top-0 shadow-md z-50 py-3">
     <div class="lg:container px-4 mx-auto">
         <div class="flex flex-col lg:flex-row justify-between items-center lg:gap-4 z-50">
-            <div class="w-full flex flex-row justify-between items-center lg:max-w-md lg:border-0 border-b py-3">
+            <div class="w-full flex flex-row justify-between items-center lg:max-w-lg lg:border-0 border-b py-3">
                 <div class="w-full">
-                    <img class=""
-                        src="https://lh3.googleusercontent.com/drive-storage/AJQWtBNgbokJBxqSuHoeR6kkqKPp-19MpynFTd18HM-Co-TCjezTFCsv6T037q9K2Yyo4GuJ_Avfu7a08NKPUbxXbWtFemM_l4yXeDdyIjFVMNgPm0o=s220"
+                    <img class="aspect-auto w-[40%]"
+                        src="https://res.cloudinary.com/thors/image/upload/mitramedia.webp"
                         alt="" />
                 </div>
                 <!-- Menu button for small screens -->
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div :class="open ? 'block mt-3 lg:mt-0' : 'hidden lg:flex lg:flex-row'" class="w-full lg:py-3 text-xs">
-                <div class="w-full lg:max-w-4xl flex flex-col lg:flex-row justify-start lg:items-center gap-2 lg:gap-4">
+                <div class="w-full lg:max-w-4xl flex flex-col lg:flex-row justify-end lg:items-center gap-2 lg:gap-4">
                     @foreach ($menus as $menu)
                         @if ($menu->is_active)
                             <a href="{{ route(strtolower(class_basename($menu->classname))) }}"

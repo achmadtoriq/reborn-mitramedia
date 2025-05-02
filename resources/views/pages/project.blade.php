@@ -2,9 +2,10 @@
 @section('meta-desc', $meta_desc)
 @section('title', $title)
 
-<div class="w-full">
+<div class="w-full mt-20">
+    <x-header-section title="Project Kami" subtitle="Sejarah Singkat Mitramedia Advertising"/>
     <div class="w-full md:container mx-auto p-5">
-        <div class="w-full flex flex-col justify-start gap-3 md:gap-6 my-20">
+        <div class="w-full flex flex-col justify-start gap-3 md:gap-6 mb-20">
             @foreach ($data_image as $key => $item)
                 <div class="">
                     <div class="flex flex-wrap justify-start items-center gap-3 my-2 md:my-4 p-1 md:p-2">

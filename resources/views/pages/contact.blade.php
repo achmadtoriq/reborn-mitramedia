@@ -2,10 +2,10 @@
 @section('meta-desc', $meta_desc)
 @section('title', $title)
 
-<div class="w-full mt-20">
-    <x-header-section title="Hubungi Kami" subtitle="Sejarah Singkat Mitramedia Advertising"/>
+<div class="w-full mt-14">
+    <x-header-section title="Hubungi Kami" subtitle="Siap Bantu Pasang Neon Box & Reklame Murah di Surabaya – Konsultasi Gratis!"/>
     <div class="p-5 container mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 place-content-center md:gap-6 my-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 place-content-center md:gap-6 md:my-20">
             <div class="order-last md:order-first flex flex-col gap-2">
                 <p class="text-justify">Untuk pertanyaan atau permintaan dapat dilakukan dengan menghubungi kami
                     melalui telepon, email, atau kunjungi office dan workshop kami dibawah ini.</p>
@@ -40,11 +40,11 @@
                     <a href="https://wa.me/6282213280698?text=Halo,%20saya%20tertarik%20dengan%20penawaran%20pada%20website%20Anda.%20Bisa%20berikan%20detail%20lebih%20lanjut?"
                         target="_blank">
                         <button
-                            class="bg-red-600 rounded-full capitalize px-4 py-2 font-bold text-lg lg:text-1xl text-white text-center flex flex-wrap items-center gap-2 mx-auto"><x-si-whatsapp
+                            class="bg-red-600 rounded-full cursor-pointer capitalize px-4 py-2 font-bold text-lg lg:text-1xl text-white text-center flex flex-wrap items-center gap-2 mx-auto"><x-si-whatsapp
                                 class="w-6 h-6" /> hubungi
                             kami</button>
                     </a>
-                    <p class="py-6">atau dapat ditanyakan melalui email berikut :</p>
+                    <p class="py-6 px-3">atau dapat ditanyakan melalui email berikut :</p>
                 </div>
                 <x-sendmail/>
                 {{-- <livewire:components.send-mail /> --}}
@@ -52,3 +52,16 @@
         </div>
     </div>
 </div>
+
+@push('custom-scripts')
+    <script>
+        gtag('event', 'ads_conversion_contact_us', {
+            'send_to': 'AW-11158357351',      // ID conversion tag dari Google Ads
+            'value': 1  ,                     // Nilai konversi (misal: jumlah nominal yang relevan, bisa 0 jika tidak ada)
+            'currency': 'IDR',                // Mata uang untuk nilai konversi (ganti sesuai kebutuhan, contoh: 'IDR')
+            'event_category': 'Contact',      // Kategori event (misal: 'Contact' atau 'Leads')
+            'event_label': 'Hubungi Kami',    // Label deskriptif dari event
+            'transaction_id': ''              // (Opsional) ID transaksi jika relevan
+        });
+    </script>
+@endpush

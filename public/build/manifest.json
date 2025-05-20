@@ -12,7 +12,7 @@
     "src": "node_modules/leaflet/dist/images/marker-icon.png"
   },
   "resources/css/app.css": {
-    "file": "assets/app-D8etWkC0.css",
+    "file": "assets/app-5la49vzs.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -29,5 +29,11 @@
       "assets/layers-2x-Bpkbi35X.png",
       "assets/marker-icon-hN30_KVU.png"
     ]
+  },
+  "resources/js/tracking-mitra.js": {
+    "file": "assets/tracking-mitra-6XV0XUA8.js",
+    "name": "tracking-mitra",
+    "src": "resources/js/tracking-mitra.js",
+    "isEntry": true
   }
 }

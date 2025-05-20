@@ -28,7 +28,7 @@
                 <label for="message" class="block mb-2 font-medium text-gray-700">Deskripsi</label>
                 <textarea id="message" rows="3" wire:model="desc"
                     class="block w-full p-2 border border-zinc-300 rounded-md shadow-sm focus:border-red-600 focus:ring focus:ring-red-200"
-                    placeholder="Ceritakan deitl apa yang ditanyakan..."></textarea>
+                    placeholder="Ceritakan detil apa yang ditanyakan..."></textarea>
             </div>
 
             <button class="lg:w-1/4 px-4 py-2 font-semibold text-white bg-red-600 rounded hover:bg-red-700">Submit

@@ -28,6 +28,9 @@ class Artikel extends Component
         $this->title = $result_meta->title;
 
         if ($slug) {
+            $this->meta_title = ucfirst(str_replace("-", " ", $slug));
+            $this->meta_desc = ucfirst(str_replace("-", " ", $slug));
+            $this->title = ucfirst(str_replace("-", " ", $slug));
             $this->article = Article::with('tags')->where('slug', $slug)->first();
         } else {
             $this->list_article = Article::with('tags')->get()->sortDesc();

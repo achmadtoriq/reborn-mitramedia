@@ -5,64 +5,64 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
         <url>
-                <loc>http://localhost</loc>
+                <loc>https://www.advertisingmitramedia.com</loc>
                 <lastmod>2025-03-15T14:29:15+00:00</lastmod>
                 <changefreq>daily</changefreq>
                 <priority>1.0</priority>
         </url>
         <url>
-                <loc>http://localhost/about</loc>
+                <loc>https://www.advertisingmitramedia.com/about</loc>
                 <lastmod>2025-03-15T14:29:15+00:00</lastmod>
                 <changefreq>daily</changefreq>
                 <priority>1.0</priority>
         </url>
         <url>
-                <loc>http://localhost/artikel</loc>
+                <loc>https://www.advertisingmitramedia.com/artikel</loc>
                 <lastmod>2025-03-15T14:29:15+00:00</lastmod>
                 <changefreq>daily</changefreq>
                 <priority>1.0</priority>
         </url>
         <url>
-                <loc>http://localhost/sosial-media</loc>
+                <loc>https://www.advertisingmitramedia.com/sosial-media</loc>
                 <lastmod>2025-03-15T14:29:15+00:00</lastmod>
                 <changefreq>daily</changefreq>
                 <priority>1.0</priority>
         </url>
         <url>
-                <loc>http://localhost/project</loc>
+                <loc>https://www.advertisingmitramedia.com/project</loc>
                 <lastmod>2025-03-15T14:29:15+00:00</lastmod>
                 <changefreq>daily</changefreq>
                 <priority>1.0</priority>
         </url>
         <url>
-                <loc>http://localhost/contact</loc>
+                <loc>https://www.advertisingmitramedia.com/contact</loc>
                 <lastmod>2025-03-15T14:29:15+00:00</lastmod>
                 <changefreq>daily</changefreq>
                 <priority>1.0</priority>
         </url>
         <url>
                 <loc>
-                        http://localhost/artikel/keunggulan-neon-box-surabaya-untuk-bisnis-anda-bersama-mitramedia-advertising</loc>
+                        https://www.advertisingmitramedia.com/artikel/keunggulan-neon-box-surabaya-untuk-bisnis-anda-bersama-mitramedia-advertising</loc>
                 <lastmod>2025-03-19T20:14:40+00:00</lastmod>
                 <changefreq>weekly</changefreq>
                 <priority>0.8</priority>
         </url>
         <url>
-                <loc>http://localhost/artikel/neon-box-murah-solusi-promosi-efektif-untukbisnis-anda</loc>
+                <loc>https://www.advertisingmitramedia.com/artikel/neon-box-murah-solusi-promosi-efektif-untukbisnis-anda</loc>
                 <lastmod>2025-03-20T03:55:53+00:00</lastmod>
                 <changefreq>weekly</changefreq>
                 <priority>0.8</priority>
         </url>
         <url>
                 <loc>
-                        http://localhost/artikel/jasa-neon-box-surabaya-solusi-iklan-terbaik-untuk-bisnis-anda</loc>
+                        https://www.advertisingmitramedia.com/artikel/jasa-neon-box-surabaya-solusi-iklan-terbaik-untuk-bisnis-anda</loc>
                 <lastmod>2025-03-21T03:18:31+00:00</lastmod>
                 <changefreq>weekly</changefreq>
                 <priority>0.8</priority>
         </url>
         <url>
                 <loc>
-                        http://localhost/artikel/mitramedia-advertising-jasa-pembuatan-neon-box-dan-papan-reklame-di-surabaya</loc>
+                        https://www.advertisingmitramedia.com/artikel/mitramedia-advertising-jasa-pembuatan-neon-box-dan-papan-reklame-di-surabaya</loc>
                 <lastmod>2025-03-21T04:17:39+00:00</lastmod>
                 <changefreq>weekly</changefreq>
                 <priority>0.8</priority>

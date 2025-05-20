@@ -1,5 +1,5 @@
 <div class="w-full bg-zinc-900 text-white tracking-wider ">
-    <div class="w-full px-16 md:px-0 mx-auto">
+    <div class="w-full px-10 md:px-0 mx-auto">
         <div class="max-w-7xl grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-6 justify-between mx-auto py-16">
             <div class="flex flex-col px-5">
                 <img src="https://res.cloudinary.com/thors/image/upload/mitramedia2.webp"
@@ -22,7 +22,7 @@
                 <div class="my-2 flex gap-3">
                     <x-fab-facebook-square class="w-10 h-10" />
                     <x-fab-square-x-twitter class="w-10 h-10" />
-                    <x-fab-instagram class="w-10 h-10" />
+                    <a href="https://www.instagram.com/mitramedia.advertising/?hl=en" target="_blank"><x-fab-instagram class="w-10 h-10" /></a>
                 </div>
             </div>
             <div class="order-2 md:order-4 flex flex-col justify-start">
@@ -47,6 +47,6 @@
         </div>
     </div>
     <div class="border-t py-3 border-zinc-300/30 italic text-center mx-auto">
-        <p>Copyright &copy; {{ date('Y') }} Mitramedia Advertising</p>
+        <p class="text-xs md:text-sm">Copyright &copy; {{ date('Y') }} Mitramedia Advertising</p>
     </div>
 </div>

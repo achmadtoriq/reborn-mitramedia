@@ -117,3 +117,16 @@
         </div>
     </div>
 </div>
+
+@push('custom-scripts')
+    <script>
+        gtag('event', 'ads_conversion_detail_article', {
+            'send_to': 'AW-11158357351',      // ID conversion tag dari Google Ads
+            'value': 1  ,                     // Nilai konversi (misal: jumlah nominal yang relevan, bisa 0 jika tidak ada)
+            'currency': 'IDR',                // Mata uang untuk nilai konversi (ganti sesuai kebutuhan, contoh: 'IDR')
+            'event_category': 'Artikel Detail',        // Kategori event (misal: 'Contact' atau 'Leads')
+            'event_label': 'Project Neon Box Surabaya',    // Label deskriptif dari event
+            'transaction_id': ''              // (Opsional) ID transaksi jika relevan
+        });
+    </script>
+@endpush

@@ -20,27 +20,45 @@ class Project extends Component
     public $folderId = [
         "neonbox" => [
             "id" => "1koZgFRp3VT6jVFLxC94PRXyvXFJ6AEom",
-            "name" => "Neon-Box"
+            "name" => "Neon-Box",
+            "title" => "Proyek Neon Box Surabaya – Mitramedia Advertising",
+            "meta_title" => "Neon Box Surabaya – Hasil Proyek & Portofolio Terbaik",
+            "meta_desc" => "Galeri proyek neon box Surabaya – jasa desain & pemasangan untuk toko, kafe, dan kantor. Estetis dan tahan lama."
         ],
         "indoor" => [
             "id" => "1xMMFmN3rMB4Up_AJ0NKJJhrWyY_yNDMO",
-            "name" => "Indoor-Outdoor"
+            "name" => "Indoor-Outdoor",
+            "title" => "Portofolio Neon Box & Reklame Indoor Outdoor Surabaya",
+            "meta_title" => "Neon Box & Reklame Indoor Outdoor Surabaya",
+            "meta_desc" => "Proyek reklame & neon box indoor-outdoor Surabaya. Cocok untuk toko, kantor, event, dan promosi bisnis Anda."
         ],
         "letter" => [
             "id" => "1pzcLiWZdGKZdQD4-ej4sy7fld5sA6qSV",
-            "name" => "Letter-Timbul"
+            "name" => "Letter-Timbul",
+            "title" => "Portofolio Letter Timbul – Neon Box & Reklame Surabaya",
+            "meta_title" => "Huruf Timbul Surabaya – Proyek Letter Signage Terbaru",
+            "meta_desc" => "Contoh huruf timbul berkualitas dari proyek signage kami di Surabaya. Solusi terbaik untuk kebutuhan promosi visual bisnis Anda."
         ],
         "stiker" => [
             "id" => "1ncz3iisSMzAITBfCmezBWRxOkoxPq2KP",
-            "name" => "Mobil-Branding"
+            "name" => "Mobil-Branding",
+            "title" => "Portofolio Proyek Stiker Surabaya - Mitramedia Advertising",
+            "meta_title" => "Stiker Surabaya – Proyek Desain & Pemasangan",
+            "meta_desc" => "Proyek stiker profesional di Surabaya. Desain custom dan pemasangan presisi untuk bisnis Anda."
         ],
         "reklame" => [
             "id" => "1NKwgI_AjCFwExFhp2FBKZjPvACAw6I0L",
-            "name" => "Papan-Reklame"
+            "name" => "Papan-Reklame",
+            "title" => "Galeri Pemasangan Reklame Surabaya – Mitramedia Advertising",
+            "meta_title" => "Pemasangan Reklame Surabaya – Proyek Desain & Pemasangan",
+            "meta_desc" => "Galeri proyek reklame Surabaya – solusi desain dan pemasangan reklame profesional untuk berbagai jenis bisnis."
         ],
         "videotron" => [
             "id" => "1LslQqF40qqFFbcsugFwPd7-XaV0vQWNv",
-            "name" => "Videotron"
+            "name" => "Videotron",
+            "title" => "Hasil Proyek Videotron – Mitramedia Advertising",
+            "meta_title" => "Contoh Proyek Videotron – Jasa Profesional Surabaya",
+            "meta_desc" => "Galeri proyek videotron Surabaya – solusi layar LED untuk branding dan event dengan kualitas dan keandalan terbaik."
         ]
     ];
 
@@ -60,6 +78,10 @@ class Project extends Component
             $this->params = $this->folderId[$slug];
             $folderIdSlug = $this->params['id'];
             $folderName = $this->params['name'];
+
+            $this->meta_title = $this->params['meta_title'];
+            $this->meta_desc = $this->params['meta_desc'];
+            $this->title = $this->params['title'];
 
             $cache_name = "cache_".$slug;
 

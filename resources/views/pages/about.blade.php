@@ -2,10 +2,10 @@
 @section('meta-desc', $meta_desc)
 @section('title', $title)
 
-<div class="w-full mt-20">
-    <x-header-section title="Tentang Kami" subtitle="Sejarah Singkat Mitramedia Advertising"/>
+<div class="w-full mt-14">
+    <x-header-section title="Tentang Kami" subtitle="Melayani Jasa Pemasangan Neon Box & Reklame Murah di Surabaya"/>
     <div class="p-5 container mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 place-content-center md:gap-6 my-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 place-content-center md:gap-6 my-5 md:my-20">
             <div class="md:px-3">
                 <img src="https://res.cloudinary.com/thors/image/upload/v1742786034/about-us_exkq9g.webp"
                     class="rounded-md aspect-auto md:w-1/2 mx-auto"
@@ -70,3 +70,16 @@
     </div>
     <x-need-neonbox />
 </div>
+
+@push('custom-scripts')
+    <script>
+        gtag('event', 'ads_conversion_about_us', {
+            'send_to': 'AW-11158357351',      // ID conversion tag dari Google Ads
+            'value': 1  ,                     // Nilai konversi (misal: jumlah nominal yang relevan, bisa 0 jika tidak ada)
+            'currency': 'IDR',                // Mata uang untuk nilai konversi (ganti sesuai kebutuhan, contoh: 'IDR')
+            'event_category': 'About',        // Kategori event (misal: 'Contact' atau 'Leads')
+            'event_label': 'Tentang Kami',    // Label deskriptif dari event
+            'transaction_id': ''              // (Opsional) ID transaksi jika relevan
+        });
+    </script>
+@endpush

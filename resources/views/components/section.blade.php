@@ -14,7 +14,7 @@
             </div>
 
             <!-- Responsive Grid for Content Cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 justify-center my-14">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 justify-center py-10">
                 {{ $slot }}
             </div>
         </div>
